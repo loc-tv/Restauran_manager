@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:GUI.View"
         mc:Ignorable="d"
         Icon="/Image/Logo_2.ico"
@@ -17,7 +18,7 @@
     <Border CornerRadius="0">
         
         <Border CornerRadius="0"
-                Background="#FFFFFF"
+                Background="White"
                 Opacity="1.0"
                 BorderThickness="2">
             <Border.BorderBrush>
@@ -49,7 +50,7 @@
                             Margin="10,0,10,0">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="25"/>
+                            <RowDefinition />
                             <RowDefinition Height="100"/>
                             <RowDefinition Height="80"/>
                             <RowDefinition Height="450"/>
@@ -58,56 +59,76 @@
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
-                                    <ColumnDefinition Width="25"/>
-                                    <ColumnDefinition Width="25"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="30"/>
                                 </Grid.ColumnDefinitions>
-                                
+
                                 <Button x:Name="btnMinimize"
-                                        BorderBrush="Transparent"
+                                        Content="{materialDesign:PackIcon Kind = WindowMinimize}"
+                                        ToolTip="Minimize"
                                         Cursor="Hand"
                                         Grid.Column="1"
+                                        Height="25" Width="30"
                                         Click="btnMinimize_Click">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/Image/MinimizeIcon.png"
-                                                    Stretch="Uniform"/>
-                                    </Button.Background>
-
-                                    <Button.Style>
-                                        <Style TargetType="Button">
-                                            <Setter Property="Background" Value="Transparent"/>
-                                            <Style.Triggers>
-                                                <Trigger Property="IsMouseOver" Value="True">
-                                                    <Setter Property="Background" Value="#EEF1FF"/>
-                                                    <Setter Property="Opacity" Value="0.2"/>
-                                                </Trigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Button.Style>
-                                    <Border Height="25"/>
-                                </Button>
-
-                                <Button x:Name="btnClose"
-                                        BorderBrush="Transparent"
-                                        Cursor="Hand"
-                                        Grid.Column="2"
-                                        Click="btnClose_Click">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/Image/CloseIcon.png"
-                                                    Stretch="Uniform"/>
-                                    </Button.Background>
                                     
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" Value="Transparent"/>
+                                            <Setter Property="Foreground" Value="Black"/>
                                             <Style.Triggers>
                                                 <Trigger Property="IsMouseOver" Value="True">
                                                     <Setter Property="Background" Value="#EEF1FF"/>
-                                                    <Setter Property="Opacity" Value="0.2"/>
+                                                    <Setter Property="Foreground" Value="#3B9AE1"/>
+                                                    <Setter Property="Opacity" Value="0.3"/>
                                                 </Trigger>
                                             </Style.Triggers>
                                         </Style>
                                     </Button.Style>
-                                    <Border Height="25"/>
+
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border CornerRadius="5"
+                                                    Background="{TemplateBinding Background}">
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Center"/>
+
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+
+                                <Button x:Name="btnClose"
+                                        Content="{materialDesign:PackIcon Kind=WindowClose}"
+                                        ToolTip="Close"
+                                        Cursor="Hand"
+                                        Grid.Column="2"
+                                        Click="btnClose_Click">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Background" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" Value="Transparent"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="#FF2442"/>
+                                                    <Setter Property="Foreground" Value="#3B9AE1"/>
+                                                    <Setter Property="Opacity" Value="1"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border CornerRadius="5"
+                                                    Background="{TemplateBinding Background}">
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Center"/>
+
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
                                 </Button>
                             </Grid>
                         </StackPanel>

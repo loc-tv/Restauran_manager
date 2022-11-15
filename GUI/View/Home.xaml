@@ -4,14 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Home" Height="720" Width="1280"
+        Icon="/Image/Logo_2.ico"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown"
         Background="Transparent"
         AllowsTransparency="True">
-    
+    <Border  CornerRadius="0"
+                Background="White"
+                Opacity="1.0"
+                BorderThickness="2">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FAF7F0" Offset="0.00"/>
+                <GradientStop Color="#CDFCF6" Offset="0.25"/>
+                <GradientStop Color="#BCCEF8" Offset="0.50"/>
+                <GradientStop Color="#B1AFFF" Offset="0.75"/>
+                <GradientStop Color="#98A8F8" Offset="1.00"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Button Content="{materialDesign:PackIcon WindowMinimize}"
+                        ToolTip="Icon"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Height="25"
+                        Width="40"/>
 
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

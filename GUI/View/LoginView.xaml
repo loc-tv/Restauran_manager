@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:GUI.View"
+        xmlns:viewModel="clr-namespace:GUI.ViewModel" xmlns:customcontrol="clr-namespace:GUI.CustomControl"
         mc:Ignorable="d"
         Icon="/Image/Logo_2.ico"
         Title="Login" Height="720" Width="1280"
@@ -15,6 +16,18 @@
         Background="Transparent"
         AllowsTransparency="True">
 
+    <Window.DataContext>
+        <viewModel:LoginViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <materialDesign:BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+    
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
+    </Window.Visibility>
+    
     <Border CornerRadius="0">
         
         <Border CornerRadius="0"
@@ -53,7 +66,7 @@
                             <RowDefinition />
                             <RowDefinition Height="100"/>
                             <RowDefinition Height="80"/>
-                            <RowDefinition Height="450"/>
+                            <RowDefinition Height="500"/>
                         </Grid.RowDefinitions>
                         <StackPanel Grid.Row="0">
                             <Grid>
@@ -167,6 +180,7 @@
                             </TextBlock>
                             
                             <TextBox x:Name="Txt_User"
+                                     Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
                                      FontSize="30"
                                      FontWeight="Medium"
                                      FontFamily="UTM HelveBold"
@@ -192,25 +206,22 @@
                                        Margin="80,20,0,0">
                             </TextBlock>
 
-                            <PasswordBox x:Name="Txt_Pass"
-                                     FontSize="30"
-                                     FontWeight="Medium"
-                                     FontFamily="UTM HelveBold"
-                                     Foreground="Black"
-                                     CaretBrush="Black"
-                                     BorderBrush="Black"
-                                     BorderThickness="0,0,0,2"
-                                     Margin="80,5,80,0"
-                                     Padding="55,0,0,0">
-                                <PasswordBox.Background>
-                                    <ImageBrush ImageSource="/Image/KeyIcon.png"
-                                                Stretch="None"
-                                                AlignmentX="Left">
-                                    </ImageBrush>
-                                </PasswordBox.Background>
-                            </PasswordBox>
+                            <customcontrol:BindablePasswordBox Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                               Margin="80,5,80,0">
+                                
+                            </customcontrol:BindablePasswordBox>
+
+                            <TextBlock Text="{Binding ErrorMessage}"
+                                       Foreground="#FD5D5D"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       FontFamily="UTM Beautiful Caps"
+                                       TextWrapping="Wrap"
+                                       Margin="80,10,0,0">
+                            </TextBlock>
 
                             <Button x:Name="Btn_Managerment"
+                                    Command="{Binding LoginCommand}"
                                     BorderThickness="0"
                                     Content="Quản lý"
                                     Foreground="White"
@@ -242,10 +253,10 @@
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
-                                
                             </Button>
 
                             <Button x:Name="Btn_Staff"
+                                    Command="{Binding LoginCommand}"
                                     BorderThickness="0"
                                     Content="Nhân viên"
                                     Foreground="White"

@@ -17,7 +17,7 @@ namespace GUI.ViewModel
     public class LoginViewModel : ViewModelBasic
     {
         //Fields
-        private string _username;
+        private string _username = "admin";
         private SecureString _password;
         private string _errorMessage;
         private bool _isViewVisible = true;

@@ -33,7 +33,7 @@
         <Border CornerRadius="0"
                 Background="White"
                 Opacity="1.0"
-                BorderThickness="2">
+                BorderThickness="2" Height="720" VerticalAlignment="Bottom">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#FAF7F0" Offset="0.00"/>
@@ -215,7 +215,7 @@
                                        Foreground="#FD5D5D"
                                        FontSize="20"
                                        FontWeight="Bold"
-                                       FontFamily="UTM Beautiful Caps"
+                                       FontFamily="UTM French Vanilla"
                                        TextWrapping="Wrap"
                                        Margin="80,10,0,0">
                             </TextBlock>
@@ -223,6 +223,7 @@
                             <Button x:Name="Btn_Managerment"
                                     Command="{Binding LoginCommand}"
                                     BorderThickness="0"
+                                    Width="450" Height="70"
                                     Content="Quản lý"
                                     Foreground="White"
                                     FontSize="50"
@@ -244,12 +245,10 @@
 
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
-                                        <Border Width="450" Height="70"
-                                                CornerRadius="15"
+                                        <Border CornerRadius="15"
                                                 Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"
                                                               HorizontalAlignment="Center"/>
-
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
@@ -258,6 +257,7 @@
                             <Button x:Name="Btn_Staff"
                                     Command="{Binding LoginCommand}"
                                     BorderThickness="0"
+                                    Width="450" Height="70"
                                     Content="Nhân viên"
                                     Foreground="White"
                                     FontSize="50"
@@ -279,8 +279,7 @@
 
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
-                                        <Border Width="450" Height="70"
-                                                CornerRadius="15"
+                                        <Border CornerRadius="15"
                                                 Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"
                                                               HorizontalAlignment="Center"/>

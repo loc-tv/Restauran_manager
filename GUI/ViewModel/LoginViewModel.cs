@@ -1,10 +1,16 @@
-﻿using System;
+﻿using GUI.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using GUI.Repositories;
+using System.Net;
+using System.Threading;
+using MaterialDesignColors.Recommended;
+using System.Security.Principal;
 
 namespace GUI.ViewModel
 {
@@ -15,6 +21,7 @@ namespace GUI.ViewModel
         private SecureString _password;
         private string _errorMessage;
         private bool _isViewVisible = true;
+        private IUserRepository userRepository;
 
         public string Username 
         {
@@ -73,6 +80,7 @@ namespace GUI.ViewModel
         //Constructor
         public LoginViewModel()
         {
+            userRepository = new UserRepository();
             LoginCommand = new ViewModelCommand(ExecutedLoginCommand, CanExecutedLoginCommand);
             RecoverPasswordCommand = new ViewModelCommand(p => ExecuteRecoverPasswordCommand("",""));
         }
@@ -90,7 +98,17 @@ namespace GUI.ViewModel
 
         private void ExecutedLoginCommand(object obj)
         {
-            throw new NotImplementedException();
+            var isValidUser = userRepository.AuthenticateUser(new NetworkCredential(Username, Password));
+            if(isValidUser)
+            {
+                Thread.CurrentPrincipal = new GenericPrincipal(
+                    new GenericIdentity(Username),null);
+                IsViewVisible = false;
+;           }
+            else 
+            {
+                ErrorMessage = "* Invalid username or password";
+            }
         }
 
         private void ExecuteRecoverPasswordCommand(string username, string email)

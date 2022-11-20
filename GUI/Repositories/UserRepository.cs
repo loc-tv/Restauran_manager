@@ -52,7 +52,32 @@ namespace GUI.Repositories
 
         public UserModel GetByUsername(string username)
         {
-            throw new NotImplementedException();
+            UserModel user = null;
+            using (var connection = GetConnection())
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                //command.CommandText = "SELECT *FROM [dbo].[Employees] WHERE [Username] = @username";
+                command.CommandText = "SELECT *FROM dbo.[User] WHERE [Username] = @username";
+                command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        user = new UserModel()
+                        {
+                            Id = reader[0].ToString(),
+                            Username = reader[1].ToString(),
+                            Password = String.Empty,
+                            Name = reader[3].ToString(),
+                            LastName = reader[4].ToString(),
+                            Email = reader[5].ToString(),
+                        };
+                    }
+                }
+            }
+            return user;
         }
 
         public void Remove(int id)

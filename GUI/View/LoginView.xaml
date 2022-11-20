@@ -149,7 +149,7 @@
                         <StackPanel Grid.Row="1"
                                     Margin="0,20,0,0">
                             <TextBlock Text="ĐĂNG NHẬP PHẦN MỀM"
-                                       Foreground="#51A6DE"
+                                       Foreground="#0072BC"
                                        FontSize="60"
                                        FontWeight="Bold"
                                        FontFamily="UTM HelveBold"
@@ -171,8 +171,8 @@
                         
                         <StackPanel Grid.Row="3"
                                     Margin="0,10,0,0">
-                            <TextBlock Text="User name"
-                                       Foreground="#51A6DE"
+                            <TextBlock Text="Username"
+                                       Foreground="#0072BC"
                                        FontSize="25"
                                        FontWeight="Bold"
                                        FontFamily="UTM HelveBold"
@@ -198,8 +198,8 @@
                                 </TextBox.Background>
                             </TextBox>
 
-                            <TextBlock Text="Pass word"
-                                       Foreground="#51A6DE"
+                            <TextBlock Text="Password"
+                                       Foreground="#0072BC"
                                        FontSize="25"
                                        FontWeight="Bold"
                                        FontFamily="UTM HelveBold"
@@ -215,7 +215,7 @@
                                        Foreground="#FD5D5D"
                                        FontSize="20"
                                        FontWeight="Bold"
-                                       FontFamily="UTM French Vanilla"
+                                       FontFamily="UTM HelveBold"
                                        TextWrapping="Wrap"
                                        Margin="80,10,0,0">
                             </TextBlock>
@@ -223,6 +223,7 @@
                             <Button x:Name="Btn_Managerment"
                                     Command="{Binding LoginCommand}"
                                     BorderThickness="0"
+                                    Background="#0072BC"
                                     Width="450" Height="70"
                                     Content="Quản lý"
                                     Foreground="White"
@@ -231,63 +232,28 @@
                                     FontWeight="Bold"
                                     Cursor="Hand"
                                     Margin="80,20,80,0"
+                                    Opacity="1"
+                                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                    materialDesign:ButtonAssist.CornerRadius="15"
                                     Click="Btn_Login_Click">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#51A6DE"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#42C2FF"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border CornerRadius="15"
-                                                Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="Center"
-                                                              HorizontalAlignment="Center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
                             </Button>
 
                             <Button x:Name="Btn_Staff"
                                     Command="{Binding LoginCommand}"
                                     BorderThickness="0"
                                     Width="450" Height="70"
+                                    Background="#0072BC"
                                     Content="Nhân viên"
                                     Foreground="White"
                                     FontSize="50"
                                     FontFamily="UTM HelveBold"
                                     FontWeight="Bold"
                                     Cursor="Hand"
+                                    Opacity="1"
                                     Margin="80,20,80,0"
+                                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                    materialDesign:ButtonAssist.CornerRadius="15"
                                     Click="Btn_Staff_Click">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#E55B60"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FF4848"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border CornerRadius="15"
-                                                Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="Center"
-                                                              HorizontalAlignment="Center"/>
-
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                                
                             </Button>
 
                             <!--TextBlock Text="Lấy lại mật khẩu?"

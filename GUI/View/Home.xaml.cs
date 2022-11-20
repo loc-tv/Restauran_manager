@@ -44,5 +44,49 @@ namespace GUI.View
         {
 
         }
+
+        private void btn_ChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Logout_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Home_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_List_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Customer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_ViewTable_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Staff_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Statistical_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btn_Back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

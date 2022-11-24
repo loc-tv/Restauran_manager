@@ -105,10 +105,10 @@ namespace GUI.ViewModel
                     new GenericIdentity(Username),null);
                 IsViewVisible = false;
 ;           }
-            /*else 
+            else 
             {
                 ErrorMessage = "* Invalid username or password";
-            }*/
+            }
         }
 
         private void ExecuteRecoverPasswordCommand(string username, string email)

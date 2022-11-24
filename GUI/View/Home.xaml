@@ -40,9 +40,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0"
-                        Background="#0072BC">
+                        Background="{StaticResource color1}">
                 <TextBlock Text="Xin chào"
-                           Foreground="White"
+                           Foreground="{StaticResource titleColor5}"
                            FontSize="40"
                            FontFamily="UTM HelveBold"
                            FontStyle="Normal"
@@ -52,7 +52,7 @@
 
                 <TextBlock Text="{Binding CurrentUserAccout.DisplayName}"
                            FontSize="40"
-                           Foreground="White"
+                           Foreground="{StaticResource titleColor5}"
                            FontFamily="UTM HelveBold"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
@@ -60,83 +60,83 @@
                 <Button x:Name="btn_Home" Width="300" Height="55"
                                 Content="Trang chủ"
                                 BorderBrush="Transparent"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="30"
                                 ToolTip="Home"
                                 Margin="0,60,0,0"
-                                Background="#51A6DE"
+                                Background="{StaticResource color2}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_Home_Click">
                 </Button>
                 <Button x:Name="btn_List" Width="300" Height="55"
                                 Content="Danh sách"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
                                 BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="30"
                                 ToolTip="Show list"
                                 Margin="0,15,0,0"
-                                Background="#51A6DE"
+                                Background="{StaticResource color2}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_List_Click">
                 </Button>
                 <Button x:Name="btn_ViewTable" Width="300" Height="55"
                                 Content="Xem bàn"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
                                 BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="30"
                                 ToolTip="View table"
                                 Margin="0,15,0,0"
-                                Background="#51A6DE"
+                                Background="{StaticResource color2}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_ViewTable_Click">
                 </Button>
                 <Button x:Name="btn_Customer" Width="300" Height="55"
                                 Content="Khách hàng"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
                                 BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="30"
                                 ToolTip="View customer"
                                 Margin="0,15,0,0"
-                                Background="#51A6DE"
+                                Background="{StaticResource color2}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_Customer_Click">
                 </Button>
                 <Button x:Name="btn_Staff" Width="300" Height="55"
                                 Content="Nhân viên"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
                                 BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="30"
                                 ToolTip="View staff"
                                 Margin="0,15,0,0"
-                                Background="#51A6DE"
+                                Background="{StaticResource color2}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_Staff_Click">
                 </Button>
                 <Button x:Name="btn_Statistical" Width="300" Height="55"
                                 Content="Thống kê"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
                                 BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="30"
                                 ToolTip="View statistical"
                                 Margin="0,15,0,0"
-                                Background="#51A6DE"
+                                Background="{StaticResource color2}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_Statistical_Click">
@@ -145,7 +145,7 @@
                         Margin="0,15,0,0"
                         BorderBrush="Transparent"
                         Background="Transparent"
-                        Foreground="White"
+                        Foreground="{StaticResource titleColor5}"
                         Content="{materialDesign:PackIcon Size=35, Kind=Logout}"
                         Style="{StaticResource MaterialDesignRaisedLightButton }"
                         materialDesign:ButtonAssist.CornerRadius="15"
@@ -160,7 +160,7 @@
                         <RowDefinition Height="230"/>
                         <RowDefinition Height="450"/>
                     </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="0">
+                    <!--StackPanel Grid.Row="0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -229,15 +229,14 @@
                                         <Border CornerRadius="5"
                                                     Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"
-                                                                  HorizontalAlignment="Center"/>
-
+                                                              HorizontalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
                             
                         </Grid>
-                    </StackPanel>
+                    </StackPanel-->
                     <StackPanel Grid.Row="1"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
@@ -251,7 +250,7 @@
                             </Border.Background>
                             
                             <TextBlock Text="Chúc bạn một ngày làm việc tràn đầy năng lượng"
-                                       Foreground="White"
+                                       Foreground="{StaticResource titleColor5}"
                                        FontSize="45"
                                        FontWeight="Medium"
                                        FontFamily="SVN-Motion Picture"
@@ -264,39 +263,42 @@
                     <StackPanel Grid.Row="2" Margin="20">
                         <Button x:Name="btn_Info" Width="400" Height="80"
                                 Content="Thông tin"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
+                                BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="50"
                                 ToolTip="Show info"
                                 Margin="0,35,0,0"
-                                Background="#0072BC"
+                                Background="{StaticResource color1}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_Info_Click">
                         </Button>
                         <Button x:Name="btn_ChangePassword" Width="400" Height="80"
                                 Content="Đổi mật khẩu"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
+                                BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="50"
                                 ToolTip="Change Password"
                                 Margin="0,35,0,0"
-                                Background="#0072BC"
+                                Background="{StaticResource color1}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_ChangePassword_Click">
                         </Button>
                         <Button x:Name="btn_Logout" Width="400" Height="80"
                                 Content="Đăng xuất"
-                                Foreground="White"
+                                Foreground="{StaticResource titleColor5}"
+                                BorderBrush="Transparent"
                                 FontFamily="UTM HelveBold"
                                 FontWeight="Bold"
                                 FontSize="50"
                                 ToolTip="Log out"
                                 Margin="0,35,0,0"
-                                Background="#0072BC"
+                                Background="{StaticResource color1}"
                                 Style="{StaticResource MaterialDesignRaisedLightButton}"
                                 materialDesign:ButtonAssist.CornerRadius="15"
                                 Click="btn_Logout_Click">

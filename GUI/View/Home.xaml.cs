@@ -30,7 +30,7 @@ namespace GUI.View
                 DragMove();
         }
 
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        /*private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
@@ -38,7 +38,7 @@ namespace GUI.View
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
+        }*/
 
         private void btn_Info_Click(object sender, RoutedEventArgs e)
         {
@@ -86,7 +86,7 @@ namespace GUI.View
         }
         private void btn_Back_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
     }
 }

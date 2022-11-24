@@ -12,8 +12,8 @@ namespace GUI.Repositories
         private readonly string _connectionString;
         public RepositoryBase()
         {
-            //_connectionString = "Data Source=CLOVE;Initial Catalog=RestaurantContext;Integrated Security=True";
-            _connectionString = "Data Source=CLOVE;Initial Catalog=LoginTest;Integrated Security=True";
+            _connectionString = "Data Source=CLOVE;Initial Catalog=Restaurant;Integrated Security=True";
+            //_connectionString = "Data Source=CLOVE;Initial Catalog=LoginTest;Integrated Security=True";
 
         }
         protected SqlConnection GetConnection()

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.View"
         xmlns:viewModel ="clr-namespace:GUI.ViewModel"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Home" Height="720" Width="1280"
@@ -57,92 +58,63 @@
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"/>
-                <Button x:Name="btn_Home" Width="300" Height="55"
-                                Content="Trang chủ"
-                                BorderBrush="Transparent"
-                                Foreground="{StaticResource titleColor5}"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="30"
-                                ToolTip="Home"
-                                Margin="0,60,0,0"
-                                Background="{StaticResource color2}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_Home_Click">
-                </Button>
-                <Button x:Name="btn_List" Width="300" Height="55"
-                                Content="Danh sách"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="30"
-                                ToolTip="Show list"
-                                Margin="0,15,0,0"
-                                Background="{StaticResource color2}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_List_Click">
-                </Button>
-                <Button x:Name="btn_ViewTable" Width="300" Height="55"
-                                Content="Xem bàn"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="30"
-                                ToolTip="View table"
-                                Margin="0,15,0,0"
-                                Background="{StaticResource color2}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_ViewTable_Click">
-                </Button>
-                <Button x:Name="btn_Customer" Width="300" Height="55"
-                                Content="Khách hàng"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="30"
-                                ToolTip="View customer"
-                                Margin="0,15,0,0"
-                                Background="{StaticResource color2}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_Customer_Click">
-                </Button>
-                <Button x:Name="btn_Staff" Width="300" Height="55"
-                                Content="Nhân viên"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="30"
-                                ToolTip="View staff"
-                                Margin="0,15,0,0"
-                                Background="{StaticResource color2}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_Staff_Click">
-                </Button>
-                <Button x:Name="btn_Statistical" Width="300" Height="55"
-                                Content="Thống kê"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="30"
-                                ToolTip="View statistical"
-                                Margin="0,15,0,0"
-                                Background="{StaticResource color2}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_Statistical_Click">
-                </Button>
+                <!--Menu button-->
+                <!--Home button-->
+                <RadioButton Style="{StaticResource MenuButton}"
+                             Tag="{StaticResource color10}"
+                             Margin="10,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Trang chủ" Style="{StaticResource menuButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+                <!--List button-->
+                <RadioButton Style="{StaticResource MenuButton}"
+                             Tag="{StaticResource color10}"
+                             Margin="10,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Danh sách" Style="{StaticResource menuButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+                <!--View table button-->
+                <RadioButton Style="{StaticResource MenuButton}"
+                             Tag="{StaticResource color10}"
+                             Margin="10,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Xem bàn" Style="{StaticResource menuButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+                <!--Customer button-->
+                <RadioButton Style="{StaticResource MenuButton}"
+                             Tag="{StaticResource color10}"
+                             Margin="10,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Khách hàng" Style="{StaticResource menuButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+                <!--Staff button-->
+                <RadioButton Style="{StaticResource MenuButton}"
+                             Tag="{StaticResource color10}"
+                             Margin="10,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Nhân viên" Style="{StaticResource menuButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+                <!--Statistical button-->
+                <RadioButton Style="{StaticResource MenuButton}"
+                             Tag="{StaticResource color10}"
+                             Margin="10,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Thống kê" Style="{StaticResource menuButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
                 <Button x:Name="btn_Back" Width="64" Height="46"
-                        Margin="0,15,0,0"
+                        Margin="0,20,0,0"
                         BorderBrush="Transparent"
                         Background="Transparent"
                         Foreground="{StaticResource titleColor5}"

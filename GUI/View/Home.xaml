@@ -62,7 +62,7 @@
                 <!--Home button-->
                 <RadioButton Style="{StaticResource MenuButton}"
                              Tag="{StaticResource color10}"
-                             Margin="10,20,0,0">
+                             Margin="10,40,0,0">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Trang chủ" Style="{StaticResource menuButtonText}"/>
@@ -73,7 +73,7 @@
                              Tag="{StaticResource color10}"
                              Margin="10,20,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <fa:IconImage Icon="List" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Danh sách" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
@@ -82,7 +82,7 @@
                              Tag="{StaticResource color10}"
                              Margin="10,20,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <fa:IconImage Icon="Chair" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Xem bàn" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
@@ -91,7 +91,7 @@
                              Tag="{StaticResource color10}"
                              Margin="10,20,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <fa:IconImage Icon="Person" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Khách hàng" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
@@ -100,7 +100,7 @@
                              Tag="{StaticResource color10}"
                              Margin="10,20,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <fa:IconImage Icon="ClipboardUser" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Nhân viên" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
@@ -109,7 +109,7 @@
                              Tag="{StaticResource color10}"
                              Margin="10,20,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                        <fa:IconImage Icon="ChartArea" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Thống kê" Style="{StaticResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
@@ -126,13 +126,16 @@
                 </Button>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <Grid>
+                <ContentControl>
+                    
+                </ContentControl>
+                <!--<Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
                         <RowDefinition Height="230"/>
                         <RowDefinition Height="450"/>
                     </Grid.RowDefinitions>
-                    <!--StackPanel Grid.Row="0">
+                    --><!--StackPanel Grid.Row="0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -208,7 +211,7 @@
                             </Button>
                             
                         </Grid>
-                    </StackPanel-->
+                    </StackPanel--><!--
                     <StackPanel Grid.Row="1"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
@@ -278,7 +281,7 @@
 
 
                     </StackPanel>
-                </Grid>
+                </Grid>-->
             </StackPanel>
             
         </Grid>

@@ -20,6 +20,16 @@
     <Window.DataContext>
         <viewModel:HomeViewModel/>
     </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:PageHomeViewModel}">
+            <local:PageHomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:PageListViewModel}">
+            <local:PageListView/>
+        </DataTemplate>
+    </Window.Resources>
     
     <Border  CornerRadius="0"
                 Background="White"
@@ -62,6 +72,7 @@
                 <!--Home button-->
                 <RadioButton Style="{StaticResource MenuButton}"
                              Tag="{StaticResource color10}"
+                             Command="{Binding ShowPageHomeViewCommand}"
                              Margin="10,40,0,0">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
@@ -71,6 +82,7 @@
                 <!--List button-->
                 <RadioButton Style="{StaticResource MenuButton}"
                              Tag="{StaticResource color10}"
+                             Command="{Binding ShowPageListViewCommand}"
                              Margin="10,20,0,0">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="List" Style="{StaticResource menuButtonIcon}"/>
@@ -126,9 +138,11 @@
                 </Button>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <ContentControl>
-                    
-                </ContentControl>
+                <ContentControl Content="{Binding CurrentChildView}"
+                                Height="680"
+                                Margin="15,15,15,15"/>
+
+
                 <!--<Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>

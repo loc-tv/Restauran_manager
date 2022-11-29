@@ -24,5 +24,32 @@ namespace GUI.View
         {
             InitializeComponent();
         }
+
+        private void btn_Info_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_ChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Logout_Click(object sender, RoutedEventArgs e)
+        {
+            var loginView = new LoginView();
+            loginView.Show();
+            loginView.IsVisibleChanged += (s, ev) =>
+            {
+                if (loginView.IsVisible == false && loginView.IsLoaded)
+                {
+                    var mainView = new Home();
+                    mainView.Show();
+                    loginView.Close();
+                }
+
+            };
+            Window.GetWindow(this).Close();
+        }
     }
 }

@@ -4,9 +4,61 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GUI.View"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             Background="#FFFFFF"
+             d:DesignHeight="720" d:DesignWidth="880">
     <Grid>
-        <Image Source="/Image/PageHome.png"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="260"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button x:Name="btn_Info" Width="400" Height="80"
+                                Content="Thông tin"
+                                Foreground="{StaticResource titleColor5}"
+                                BorderBrush="Transparent"
+                                FontFamily="UTM HelveBold"
+                                FontWeight="Bold"
+                                FontSize="50"
+                                ToolTip="Show info"
+                                Margin="0,35,0,0"
+                                Background="{StaticResource color1}"
+                                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                materialDesign:ButtonAssist.CornerRadius="15"
+                                Click="btn_Info_Click">
+            </Button>
+            <Button x:Name="btn_ChangePassword" Width="400" Height="80"
+                                Content="Đổi mật khẩu"
+                                Foreground="{StaticResource titleColor5}"
+                                BorderBrush="Transparent"
+                                FontFamily="UTM HelveBold"
+                                FontWeight="Bold"
+                                FontSize="50"
+                                ToolTip="Change Password"
+                                Margin="0,35,0,0"
+                                Background="{StaticResource color1}"
+                                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                materialDesign:ButtonAssist.CornerRadius="15"
+                                Click="btn_ChangePassword_Click">
+            </Button>
+            <Button x:Name="btn_Logout" Width="400" Height="80"
+                                Content="Đăng xuất"
+                                Foreground="{StaticResource titleColor5}"
+                                BorderBrush="Transparent"
+                                FontFamily="UTM HelveBold"
+                                FontWeight="Bold"
+                                FontSize="50"
+                                ToolTip="Log out"
+                                Margin="0,35,0,0"
+                                Background="{StaticResource color1}"
+                                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                materialDesign:ButtonAssist.CornerRadius="15"
+                                Click="btn_Logout_Click">
+            </Button>
+        </StackPanel>
     </Grid>
 </UserControl>

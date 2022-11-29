@@ -73,6 +73,7 @@
                 <RadioButton Style="{StaticResource MenuButton}"
                              Tag="{StaticResource color10}"
                              Command="{Binding ShowPageHomeViewCommand}"
+                             IsChecked="True"
                              Margin="10,40,0,0">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
@@ -139,163 +140,9 @@
             </StackPanel>
             <StackPanel Grid.Column="1">
                 <ContentControl Content="{Binding CurrentChildView}"
-                                Height="680"
-                                Margin="15,15,15,15"/>
+                                Height="720"/>
 
 
-                <!--<Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="230"/>
-                        <RowDefinition Height="450"/>
-                    </Grid.RowDefinitions>
-                    --><!--StackPanel Grid.Row="0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="30"/>
-                                <ColumnDefinition Width="30"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Button x:Name="btnMinimize"
-                                        Content="{materialDesign:PackIcon Kind = WindowMinimize}"
-                                        ToolTip="Minimize"
-                                        Cursor="Hand"
-                                        Grid.Column="1"
-                                        Height="25" Width="30"
-                                        Click="btnMinimize_Click">
-
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                        <Setter Property="BorderBrush" Value="Transparent"/>
-                                        <Setter Property="Foreground" Value="Black"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#EEF1FF"/>
-                                                <Setter Property="Foreground" Value="#3B9AE1"/>
-                                                <Setter Property="Opacity" Value="0.3"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border CornerRadius="5"
-                                                    Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="Center"
-                                                                  HorizontalAlignment="Center"/>
-
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-
-                            <Button x:Name="btnClose"
-                                        Content="{materialDesign:PackIcon Kind=WindowClose}"
-                                        ToolTip="Close"
-                                        Cursor="Hand"
-                                        Grid.Column="2"
-                                        Click="btnClose_Click">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                        <Setter Property="BorderBrush" Value="Transparent"/>
-                                        <Setter Property="Foreground" Value="Black"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FF2442"/>
-                                                <Setter Property="Foreground" Value="#3B9AE1"/>
-                                                <Setter Property="Opacity" Value="1"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border CornerRadius="5"
-                                                    Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="Center"
-                                                              HorizontalAlignment="Center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-                            
-                        </Grid>
-                    </StackPanel--><!--
-                    <StackPanel Grid.Row="1"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        <Border CornerRadius="10"
-                                Height="220"
-                                Width=" 600">
-                            <Border.Background>
-                                <ImageBrush ImageSource="/Image/HomeBackgroud.png"
-                                            Stretch="UniformToFill"
-                                            Opacity="0.7"/>
-                            </Border.Background>
-                            
-                            <TextBlock Text="Chúc bạn một ngày làm việc tràn đầy năng lượng"
-                                       Foreground="{StaticResource titleColor5}"
-                                       FontSize="45"
-                                       FontWeight="Medium"
-                                       FontFamily="SVN-Motion Picture"
-                                       TextWrapping="Wrap"
-                                       TextAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"/>
-                        </Border>
-                    </StackPanel>
-                    <StackPanel Grid.Row="2" Margin="20">
-                        <Button x:Name="btn_Info" Width="400" Height="80"
-                                Content="Thông tin"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="50"
-                                ToolTip="Show info"
-                                Margin="0,35,0,0"
-                                Background="{StaticResource color1}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_Info_Click">
-                        </Button>
-                        <Button x:Name="btn_ChangePassword" Width="400" Height="80"
-                                Content="Đổi mật khẩu"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="50"
-                                ToolTip="Change Password"
-                                Margin="0,35,0,0"
-                                Background="{StaticResource color1}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_ChangePassword_Click">
-                        </Button>
-                        <Button x:Name="btn_Logout" Width="400" Height="80"
-                                Content="Đăng xuất"
-                                Foreground="{StaticResource titleColor5}"
-                                BorderBrush="Transparent"
-                                FontFamily="UTM HelveBold"
-                                FontWeight="Bold"
-                                FontSize="50"
-                                ToolTip="Log out"
-                                Margin="0,35,0,0"
-                                Background="{StaticResource color1}"
-                                Style="{StaticResource MaterialDesignRaisedLightButton}"
-                                materialDesign:ButtonAssist.CornerRadius="15"
-                                Click="btn_Logout_Click">
-                        </Button>
-
-
-                    </StackPanel>
-                </Grid>-->
             </StackPanel>
             
         </Grid>

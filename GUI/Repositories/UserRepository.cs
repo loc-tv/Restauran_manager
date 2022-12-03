@@ -26,7 +26,6 @@ namespace GUI.Repositories
                 connection.Open();
                 command.Connection = connection;
                 command.CommandText = "SELECT *FROM Employees where Username = @username AND Password = @password";
-                //command.CommandText = "SELECT *FROM dbo.[User] WHERE [Username] = @username AND [Password] = @password";
                 command.Parameters.Add("@username", SqlDbType.NVarChar).Value = credential.UserName;
                 command.Parameters.Add("@password", SqlDbType.NVarChar).Value = credential.Password;
                 validUser = command.ExecuteScalar() == null? false:true;

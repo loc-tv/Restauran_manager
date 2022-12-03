@@ -26,7 +26,6 @@ namespace GUI
                     mainView.Show();
                     loginView.Close();  
                 }
-
             };
         }
     }

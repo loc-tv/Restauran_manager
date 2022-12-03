@@ -74,7 +74,7 @@
                              Tag="{StaticResource color10}"
                              Command="{Binding ShowPageHomeViewCommand}"
                              IsChecked="True"
-                             Margin="10,40,0,0">
+                             Margin="0,40,0,0">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Trang chủ" Style="{StaticResource menuButtonText}"/>
@@ -84,7 +84,7 @@
                 <RadioButton Style="{StaticResource MenuButton}"
                              Tag="{StaticResource color10}"
                              Command="{Binding ShowPageListViewCommand}"
-                             Margin="10,20,0,0">
+                             Margin="0,20,0,0">
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="List" Style="{StaticResource menuButtonIcon}"/>
                         <TextBlock Text="Danh sách" Style="{StaticResource menuButtonText}"/>

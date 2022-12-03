@@ -7,7 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Image Source="/Image/PageList.png"/>
+        <!--<Image Source="/Image/PageList.png"/>-->
+        <Border>
+            <Border.Background>
+                <ImageBrush ImageSource="D:\Restaurant_manager\Program\GUI\GUI\Image/PageList.png"/>
+            </Border.Background>
+        </Border>
 
     </Grid>
 </UserControl>

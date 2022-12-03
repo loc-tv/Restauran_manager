@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:GUI.View"
-        xmlns:viewModel="clr-namespace:GUI.ViewModel" xmlns:customcontrol="clr-namespace:GUI.CustomControl"
+        xmlns:viewModel="clr-namespace:GUI.ViewModel"
+        xmlns:customcontrol="clr-namespace:GUI.CustomControl"
         mc:Ignorable="d"
         Icon="/Image/Logo_2.ico"
         Title="Login" Height="720" Width="1280"
@@ -33,7 +34,7 @@
         <Border CornerRadius="0"
                 Background="White"
                 Opacity="1.0"
-                BorderThickness="10" Height="720" VerticalAlignment="Bottom">
+                BorderThickness="5" Height="720" VerticalAlignment="Bottom">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="{StaticResource winBorderColor1}" Offset="0.00"/>

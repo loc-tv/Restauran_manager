@@ -118,7 +118,7 @@ namespace GUI.ViewModel
             }
             else
             {
-                CurrentUserAccout.DisplayName= "Invalid user, not logged in";
+                CurrentUserAccout.DisplayName= "Not logged in";
                 //Hide child views
             }
         }

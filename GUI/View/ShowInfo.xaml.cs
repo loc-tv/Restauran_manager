@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace GUI.View
 {
     /// <summary>
-    /// Interaction logic for ChangePassword.xaml
+    /// Interaction logic for ShowInfo.xaml
     /// </summary>
-    public partial class ChangePassword : Window
+    public partial class ShowInfo : Window
     {
-        public ChangePassword()
+        public ShowInfo()
         {
             InitializeComponent();
         }
@@ -28,19 +28,6 @@ namespace GUI.View
         {
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
-        }
-
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            var mainView = new Home();
-            var ChangePasswordView = new ChangePassword();
-            mainView.Show();
-            GetWindow(this).Close(); 
         }
     }
 }

@@ -13,8 +13,6 @@ namespace GUI.Repositories
         public RepositoryBase()
         {
             _connectionString = "Data Source=CLOVE;Initial Catalog=Restaurant;Integrated Security=True";
-            //_connectionString = "Data Source=CLOVE;Initial Catalog=LoginTest;Integrated Security=True";
-
         }
         protected SqlConnection GetConnection()
         {

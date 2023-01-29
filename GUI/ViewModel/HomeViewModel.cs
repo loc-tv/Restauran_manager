@@ -111,10 +111,9 @@ namespace GUI.ViewModel
             if (user != null)
             {
 
-                CurrentUserAccout.Username = user.Name;
+                CurrentUserAccout.Username = $"{user.Username}";
                 CurrentUserAccout.DisplayName = $"{user.LastName} {user.Name} ";
-                CurrentUserAccout.ProfilePicture = null;
-                
+                CurrentUserAccout.ProfilePicture = null;                
             }
             else
             {

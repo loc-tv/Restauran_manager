@@ -24,7 +24,7 @@ namespace GUI
                 {
                     var mainView = new Home();
                     mainView.Show();
-                    loginView.Close();  
+                    loginView.Hide();
                 }
             };
         }

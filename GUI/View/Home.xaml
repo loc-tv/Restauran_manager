@@ -7,6 +7,7 @@
         xmlns:viewModel ="clr-namespace:GUI.ViewModel"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Image="clr-namespace:GUI"
         mc:Ignorable="d"
         Title="Home" Height="720" Width="1280"
         Icon="/Image/Logo_2.ico"
@@ -44,7 +45,7 @@
                 <GradientStop Color="#98A8F8" Offset="1.00"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
-        
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="400"/>

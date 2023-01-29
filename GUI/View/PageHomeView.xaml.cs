@@ -27,12 +27,18 @@ namespace GUI.View
 
         private void btn_Info_Click(object sender, RoutedEventArgs e)
         {
-
+            var mainView = new Home();
+            var ShowInfo = new ShowInfo();
+            ShowInfo.Show();
+            Window.GetWindow(this).Hide();
         }
 
         private void btn_ChangePassword_Click(object sender, RoutedEventArgs e)
         {
-
+            var mainView = new Home();
+            var ChangePasswordView = new ChangePassword();
+            ChangePasswordView.Show();
+            Window.GetWindow(this).Hide();
         }
 
         private void btn_Logout_Click(object sender, RoutedEventArgs e)
@@ -45,9 +51,8 @@ namespace GUI.View
                 {
                     var mainView = new Home();
                     mainView.Show();
-                    loginView.Close();
+                    loginView.Hide();
                 }
-
             };
             Window.GetWindow(this).Close();
         }
